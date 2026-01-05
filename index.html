@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samira Hadid - Portfolio</title>
+    <title>Lara Zimmermann - Portfolio</title>
     
     <link rel="icon" type="image/jpeg" href="img/LZ.jpg">
+    
     <link rel="stylesheet" href="style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -31,12 +33,14 @@
 
     <section class="panel blue-bg">
         <div class="content-grid two-columns">
+            
+            <span class="num">02</span>
+
             <div class="text-col fly-in">
-                <span class="num">02</span>
                 <h2>More<br>About Me</h2>
                 <div class="desc">
-                    <p>I'm a professional model and photographer based in New York City. I've been in the fashion industry for 5 years.</p>
-                    <p>I've always looked at fashion as inspiration. I'm heavily influenced by color, movement and lines.</p>
+                    <p>Ich bin Lara Zimmermann und habe Multimedia Production studiert. Während meines Studiums habe ich meine Leidenschaft für die kreative Content-Erstellung entdeckt.</p>
+                    <p>Heute erstelle ich mit viel Engagement und einem guten Gespür für Trends Content für Social Media.</p>
                 </div>
             </div>
             <div class="img-col">
@@ -64,7 +68,6 @@
                     <a href="https://www.youtube.com/watch?v=7vEBbPliDqk" target="_blank">
                         <img src="img/ohnedich.png" alt="Musikvideo Ohne Dich">
                     </a>
-                    <p class="caption fly-in">A FOCUS ON THE BODY<br>A celebration regarding lines and movement</p>
                 </div>
             </div>
         </div>
@@ -75,7 +78,7 @@
             <span class="num abs-num">04</span>
             
             <div class="img-placeholder wide-img">
-                <a href="https://www.youtube.com/watch?v=7HJV0fHjdnk&list=PLbSvZCPqO46bbOpe0fsuNVca8kaSZpj4d" target="_blank">
+                <a href="https://www.tiktok.com/@szaumatt " target="_blank">
                     <img src="img/tik.png" alt="Shoot Concept" class="contain-img">
                 </a>
             </div>
@@ -87,8 +90,8 @@
                 </div>
                 
                 <div class="img-placeholder tall-img">
-                    <a href="https://www.youtube.com/watch?v=7HJV0fHjdnk&list=PLbSvZCPqO46bbOpe0fsuNVca8kaSZpj4d" target="_blank">
-                        <img src="img/ins.png" alt="Pose" class="contain-img">
+                    <a href="https://www.instagram.com/szaumatt/" target="_blank">
+                        <img src="img/insta.png" alt="Pose" class="contain-img">
                     </a>
                 </div>
             </div>
@@ -99,13 +102,15 @@
         <div class="content-grid overlap-layout">
             <span class="num">05</span>
             <div class="images-wrapper">
-                <div class="img-placeholder img-back">
+                
+                <div class="img-placeholder img-back hover-target">
                     <a href="https://www.youtube.com/watch?v=7HJV0fHjdnk&list=PLbSvZCPqO46bbOpe0fsuNVca8kaSZpj4d" target="_blank">
                         <img src="img/podcast.png" alt="Podcast Back">
                     </a>
                 </div>
+                
                 <div class="img-placeholder img-front">
-                    <a href="https://www.youtube.com/watch?v=7HJV0fHjdnk&list=PLbSvZCPqO46bbOpe0fsuNVca8kaSZpj4d" target="_blank">
+                    <a href="https://www.youtube.com/watch?v=NiCYs2R7aQM&list=PLbSvZCPqO46bbOpe0fsuNVca8kaSZpj4d&index=2" target="_blank">
                         <img src="img/podcast.png" alt="Podcast Front">
                     </a>
                 </div>
@@ -133,37 +138,17 @@
                 </div>
                 <div>
                     <h4>PHONE</h4>
-                    <p>+41 79 123 45 67</p>
+                    <p>+41 78 794 47 54</p>
                 </div>
                 <div>
                     <h4>EMAIL</h4>
-                    <p>lara@lucatimlauener.ch</p>
+                    <p>lara.zimmermann@gmx.com</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    // Wenn das Element im Bild ist:
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    } 
-                    // Wenn das Element NICHT MEHR im Bild ist (für Wiederholung):
-                    else {
-                        entry.target.classList.remove('visible');
-                    }
-                });
-            });
-
-            // Alle Elemente mit der Klasse "fly-in" beobachten
-            const hiddenElements = document.querySelectorAll('.fly-in');
-            hiddenElements.forEach((el) => observer.observe(el));
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>

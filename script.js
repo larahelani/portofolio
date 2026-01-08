@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible');
             }
+            // Optional: Wenn man will, dass es beim Rausscrollen wieder verschwindet:
+            // else { entry.target.classList.remove('visible'); }
         });
-    });
+    }, { threshold: 0.1 }); // Reagiert schon, wenn 10% sichtbar sind
 
     // Alle Elemente mit der Klasse "fly-in" beobachten
     const hiddenElements = document.querySelectorAll('.fly-in');
@@ -22,17 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // ============================================
     // TEIL 2: PODCAST BILD POP-UP (HOVER EFFEKT)
     // ============================================
+    // Dieser Effekt funktioniert auf Desktop. Auf Mobile werden die Bilder
+    // durch das neue CSS untereinander angezeigt, daher stört der Effekt nicht.
 
-    // Wir suchen das hintere Bild anhand der Klasse "hover-target"
     const backImage = document.querySelector('.hover-target');
 
     if (backImage) {
-        // Wenn Maus drauf: Klasse hinzufügen (Bild kommt nach vorne)
         backImage.addEventListener('mouseenter', () => {
             backImage.classList.add('pop-to-front');
         });
 
-        // Wenn Maus weg: Klasse entfernen (Bild geht nach hinten)
         backImage.addEventListener('mouseleave', () => {
             backImage.classList.remove('pop-to-front');
         });
